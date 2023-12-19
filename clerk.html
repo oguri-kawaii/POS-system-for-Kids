@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <!-- オグリはかわいいしかっこいい。異論は認めん。 -->
+        <meta charset="UTF-8">
+        <title>てんいんさんモード</title>
+        <script>
+            function audio() {
+                document.getElementById('btn_audio').currentTime = 0;
+                document.getElementById('btn_audio').play();
+            }
+
+            let counter, btnAdd;
+            let n;
+
+            function addCount(){
+                n++;
+                counter.innerHTML = n;
+            }
+
+            window.addEventListener("load", ()=>{
+                counter = document.getElementById("kazu");
+                btnAdd = document.getElementById("btnAdd");
+                
+                n = 0;
+
+                btnAdd.addEventListener("click", addCount);
+            });
+        </script>
+    </head>
+    <body>
+        <h3>てんいんさんモード</h3>
+        <h1>かうものをえらんでください</h1>
+        <button onclick="audio()" class="btn" type="button" id="btnAdd"><img src="https://tech.kantume.com/pos-assets/syohin/tomato.png" height="250"/></button> <!-- tomato -->
+        <button onclick="audio()" class="btn" type="button" id="btnAdd2"><img src="https://tech.kantume.com/pos-assets/syohin/negi.png" height="250"/></button> <!-- negi(shimonita) -->
+        <button onclick="audio()" class="btn" type="button" id="btnAdd3"><img src="https://tech.kantume.com/pos-assets/syohin/oniku.png" height="250"/></button> <!-- oniku -->
+        <button onclick="audio()" class="btn" type="button" id="btnAdd4"><img src="https://tech.kantume.com/pos-assets/syohin/juice.png" height="252o00"/></button> <!-- juice -->
+        <button onclick="audio()" class="btn" type="button" id="btnAdd5"><img src="https://tech.kantume.com/pos-assets/syohin/ice.png" height="250"/></button> <!-- ice -->
+        <button onclick="audio()" class="btn" type="button" id="btnAdd6"><img src="https://tech.kantume.com/pos-assets/syohin/omocha.png" height="250"/></button> <!-- omocha(umamusume) -->
+        <h5>商品数</h5>
+        <p id="kazu">0</p>
+        <button onclick="audio();location.href='paymentmethod.html'" class="btn" type="button" id="btnAdd6"><img src="https://tech.kantume.com/pos-assets/okaikei.png" width="500"/></button> <!-- checkout -->
+        <audio id="btn_audio">
+            <source src="https://tech.kantume.com/pos-assets/audio/button-1.mp3" type="audio/mp3">
+        </audio>
+    </body>
+</html>

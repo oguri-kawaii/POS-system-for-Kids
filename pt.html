@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>POSレジスター for Kids v1.00-payment-select</title>
+        <style type="text/css">
+            .btn{
+                display: inline-block; 
+                vertical-align: middle;
+            }
+        </style>
+        <script>
+            function audio() {
+                document.getElementById('btn_audio').currentTime = 0;
+                document.getElementById('btn_audio').play();
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1 class="centers">けっさいたんまつでそうさしてください。そうさがかんりょうしたら「かんりょう」ボタンを押してください。</h1>
+        <button onclick="audio();location.href='thanks.html'" class="btn" type="button"><img src="https://tech.kantume.com/pos-assets/complete.png" width="800"></button> <!-- 現金は厳禁 -->
+        <p style="text-align: right;"></p>
+        <img src="https://tech.kantume.com/pos-assets/product-image.png" alt="productimg" width="700">
+        <audio id="btn_audio">
+            <source src="https://tech.kantume.com/pos-assets/audio/button-1.mp3" type="audio/mp3">
+        </audio>
+    </body>
+</html>

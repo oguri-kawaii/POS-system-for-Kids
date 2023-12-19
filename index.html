@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <!-- おぐりんかわいい！！！好き！！！！ -->
+        <meta charset="UTF-8">
+        <title>POSレジスター for Kids v1.00</title>
+        <style type="text/css">
+            .btn{
+                display: inline-block; 
+                vertical-align: middle;
+            }
+        </style>
+        <script>
+            function audio() {
+                document.getElementById('btn_audio').currentTime = 0;
+                document.getElementById('btn_audio').play();
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1 class="centers">モードをせんたくしてください</h1>
+        <button onclick="audio();location.href='clerk.html'" class="btn" type="button"><img src="https://tech.kantume.com/pos-assets/clerk-mode.png" height="500"></button> <!-- Clerkモード -->
+        </center>
+        <p style="text-align: right;">POSレジスター for Kids v1.00 ©oguri-kawaii</p>
+        <audio id="btn_audio">
+            <source src="https://tech.kantume.com/pos-assets/audio/button-1.mp3" type="audio/mp3">
+        </audio>
+    </body>
+</html>

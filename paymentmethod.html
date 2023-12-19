@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <!-- オグリはかわいいしかっこいい。異論は認めん。 -->
+        <meta charset="UTF-8">
+        <title>POSレジスター for Kids v1.00-select payment method page</title>
+        <style type="text/css">
+            .btn{
+                display: inline-block; 
+                vertical-align: middle;
+            }
+        </style>
+        <script>
+            function audio() {
+                document.getElementById('btn_audio').currentTime = 0;
+                document.getElementById('btn_audio').play();
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <h1 class="centers">けっさいほうほうをせんたくしてください</h1>
+        <button onclick="audio();location.href='pt.html'" class="btn" type="button"><img src="https://tech.kantume.com/pos-assets/paymethod/cash.png" height="500"></button> <!-- 現金は厳禁 -->
+        <button onclick="audio();location.href='pt.html'" class="btn" type="button"><img src="https://tech.kantume.com/pos-assets/paymethod/creditcard.png" height="300"></button> <!-- smcc -->
+        <button onclick="audio();location.href='pt.html'" class="btn" type="button"><img src="https://tech.kantume.com/pos-assets/paymethod/emoney.png" height="500"></button> <!-- e-money -->
+        </center>
+        <p style="text-align: right;">please select payment method.</p>
+        <audio id="btn_audio">
+            <source src="https://tech.kantume.com/pos-assets/audio/button-1.mp3" type="audio/mp3">
+        </audio>
+    </body>
+</html>
